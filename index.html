@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acceso Global - Sekola</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #ffffff;
+            color: #000000;
+        }
+        .sekola-brand {
+            position: fixed;
+            top: 24px;
+            right: 24px;
+            font-weight: 900;
+            font-size: 1.2rem;
+            letter-spacing: -0.02em;
+            color: #000;
+        }
+        .world-bg {
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        .glow-on-hover:hover {
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-slide-up {
+            animation: slideUp 0.6s ease-out forwards;
+        }
+    </style>
+</head>
+<body class="world-bg min-h-screen flex items-center justify-center p-4">
+
+    <!-- Marca Sekola -->
+    <div class="sekola-brand">Sekola</div>
+
+    <main class="max-w-xl w-full bg-white p-8 md:p-12 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] border border-gray-100 animate-slide-up">
+        
+        <!-- Header -->
+        <div class="text-center mb-10">
+            <p class="text-sm font-bold tracking-widest text-gray-400 uppercase mb-4">👉 Hola, bienvenido</p>
+            <h1 class="text-4xl md:text-5xl font-black leading-tight">
+                ¿Estás listo para acceder a tu <span class="text-zinc-400">producto</span>?
+            </h1>
+        </div>
+
+        <!-- Descripción del Producto -->
+        <div class="space-y-6 mb-10 text-center">
+            <div class="inline-flex items-center gap-2 px-4 py-2 bg-zinc-100 rounded-full">
+                <span class="relative flex h-2 w-2">
+                    <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-black opacity-75"></span>
+                    <span class="relative inline-flex rounded-full h-2 w-2 bg-black"></span>
+                </span>
+                <span class="text-xs font-bold uppercase tracking-tighter">Proyecto de Código Abierto</span>
+            </div>
+            
+            <p class="text-gray-600 text-lg leading-relaxed px-2">
+                Estás a un clic de una de las mayores bibliotecas digitales del mundo. Accede a un proyecto masivo que recopila <span class="font-bold text-black underline">miles de canales de televisión</span> de todo el mundo de forma legal y gratuita. 
+                <br><br>
+                Noticias, deportes y cultura de casi cualquier país, sin suscripciones de cable, directamente en tu navegador.
+            </p>
+        </div>
+
+        <!-- Botón Principal -->
+        <div class="flex flex-col items-center">
+            <a href="https://cuty.io/Producto1" 
+               class="glow-on-hover w-full bg-black text-white text-center py-5 px-8 rounded-2xl font-bold text-xl transition-all active:scale-95 flex items-center justify-center gap-3">
+                Acceder al producto
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
+            </a>
+            
+            <!-- Garantía de Seguridad -->
+            <div class="mt-6 flex items-center gap-4 text-gray-400">
+                <div class="flex -space-x-2">
+                    <div class="w-6 h-6 rounded-full bg-gray-200 border-2 border-white"></div>
+                    <div class="w-6 h-6 rounded-full bg-gray-300 border-2 border-white"></div>
+                    <div class="w-6 h-6 rounded-full bg-gray-400 border-2 border-white"></div>
+                </div>
+                <span class="text-xs font-medium">+10k usuarios activos hoy</span>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>
